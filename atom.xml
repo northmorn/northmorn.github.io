@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://northmorn.github.io/"/>
-  <updated>2016-06-26T07:12:43.332Z</updated>
+  <updated>2016-06-27T16:01:59.625Z</updated>
   <id>https://northmorn.github.io/</id>
   
   <author>
@@ -14,6 +14,25 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hexo d can&#39;t deploy to server</title>
+    <link href="https://northmorn.github.io/2016/06/27/hexo-deploy-problem/"/>
+    <id>https://northmorn.github.io/2016/06/27/hexo-deploy-problem/</id>
+    <published>2016-06-27T15:55:02.513Z</published>
+    <updated>2016-06-27T16:01:59.625Z</updated>
+    
+    <content type="html">&lt;h3 id=&quot;Problem&quot;&gt;&lt;a href=&quot;#Problem&quot; class=&quot;headerlink&quot; title=&quot;Problem:&quot;&gt;&lt;/a&gt;Problem:&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo d&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;INFO  Deploying: git&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;INFO  Clearing .deploy_git folder...&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;INFO  Copying files from public folder...&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;On branch master&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;nothing to commit, working directory clean&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Branch master set up to track remote branch master from git@xxxx&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Everything up-to-date&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;INFO  Deploy done: git&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;Try&quot;&gt;&lt;a href=&quot;#Try&quot; class=&quot;headerlink&quot; title=&quot;Try&quot;&gt;&lt;/a&gt;Try&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;rm -rf .deploy&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;hexo generater&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;hexo deploy&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;Problem&quot;&gt;&lt;a href=&quot;#Problem&quot; class=&quot;headerlink&quot; title=&quot;Problem:&quot;&gt;&lt;/a&gt;Problem:&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td clas
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
