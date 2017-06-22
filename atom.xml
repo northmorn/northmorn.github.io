@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://northmorn.github.io/"/>
-  <updated>2017-04-25T10:57:14.099Z</updated>
+  <updated>2017-06-22T15:01:58.964Z</updated>
   <id>https://northmorn.github.io/</id>
   
   <author>
@@ -14,6 +14,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>VS2015编译python2.5</title>
+    <link href="https://northmorn.github.io/2017/06/22/VS2015%E7%BC%96%E8%AF%91python2.5/"/>
+    <id>https://northmorn.github.io/2017/06/22/VS2015编译python2.5/</id>
+    <published>2017-06-22T14:55:18.404Z</published>
+    <updated>2017-06-22T15:01:58.964Z</updated>
+    
+    <content type="html">&lt;p&gt;阅读《Python源码剖析》，在Windows环境下编译Python。&lt;br&gt;下载源码，用VS2015打开PCBuild8目录下的工程文件。&lt;br&gt;项目属性单启动项目改为python，配置属性只需生成python，pythoncore。&lt;br&gt;将make_versioninfo_d工程属性中的目标文件名修改为make_versioninfo_d。&lt;br&gt;将pythoncore工程属性中的目标文件名修改为python25_d。&lt;br&gt;向pythoncore工程中的timemodule.c文件中添加：&lt;br&gt;&lt;figure class=&quot;highlight c&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#&lt;span class=&quot;meta-keyword&quot;&gt;if&lt;/span&gt; defined _MSC_VER &amp;amp;&amp;amp; _MSC_VER &amp;gt;= 1900&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#&lt;span class=&quot;meta-keyword&quot;&gt;define&lt;/span&gt; timezone _timezone&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#&lt;span class=&quot;meta-keyword&quot;&gt;define&lt;/span&gt; tzname _tzname&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#&lt;span class=&quot;meta-keyword&quot;&gt;define&lt;/span&gt; daylight _daylight&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#&lt;span class=&quot;meta-keyword&quot;&gt;endif&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;向pythoncore工程中添加_typesmodule.c文件，该文件位于python2.5/Modules目录。  &lt;/p&gt;
+&lt;h3 id=&quot;参考信息：&quot;&gt;&lt;a href=&quot;#参考信息：&quot; class=&quot;headerlink&quot; title=&quot;参考信息：&quot;&gt;&lt;/a&gt;参考信息：&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https://bugs.python.org/issue25759&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://bugs.python.org/issue25759&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://blog.csdn.net/wanlizhengren/article/details/4798228&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://blog.csdn.net/wanlizhengren/article/details/4798228&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://disenone.github.io/2016/06/01/vs2015-python&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://disenone.github.io/2016/06/01/vs2015-python&lt;/a&gt;  &lt;/p&gt;
+&lt;/blockquote&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;阅读《Python源码剖析》，在Windows环境下编译Python。&lt;br&gt;下载源码，用VS2015打开PCBuild8目录下的工程文件。&lt;br&gt;项目属性单启动项目改为python，配置属性只需生成python，pythoncore。&lt;br&gt;将make_versionin
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>pyenv安装使用</title>

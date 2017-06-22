@@ -235,6 +235,104 @@
             
               
                 
+                <a class="post-title-link" href="/2017/06/22/VS2015编译python2.5/" itemprop="url">
+                  VS2015编译python2.5
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2017-06-22T22:55:18+08:00" content="2017-06-22">
+              2017-06-22
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>阅读《Python源码剖析》，在Windows环境下编译Python。<br>下载源码，用VS2015打开PCBuild8目录下的工程文件。<br>项目属性单启动项目改为python，配置属性只需生成python，pythoncore。<br>将make_versioninfo_d工程属性中的目标文件名修改为make_versioninfo_d。<br>将pythoncore工程属性中的目标文件名修改为python25_d。<br>向pythoncore工程中的timemodule.c文件中添加：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">if</span> defined _MSC_VER &amp;&amp; _MSC_VER &gt;= 1900</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> timezone _timezone</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> tzname _tzname</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> daylight _daylight</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br></pre></td></tr></table></figure></p>
+<p>向pythoncore工程中添加_typesmodule.c文件，该文件位于python2.5/Modules目录。  </p>
+<h3 id="参考信息："><a href="#参考信息：" class="headerlink" title="参考信息："></a>参考信息：</h3><blockquote>
+<p><a href="https://bugs.python.org/issue25759" target="_blank" rel="external">https://bugs.python.org/issue25759</a><br><a href="http://blog.csdn.net/wanlizhengren/article/details/4798228" target="_blank" rel="external">http://blog.csdn.net/wanlizhengren/article/details/4798228</a><br><a href="http://disenone.github.io/2016/06/01/vs2015-python" target="_blank" rel="external">http://disenone.github.io/2016/06/01/vs2015-python</a>  </p>
+</blockquote>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2017/04/25/pyenv/" itemprop="url">
                   pyenv安装使用
                 </a>
@@ -453,7 +551,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-count">3</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
