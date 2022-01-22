@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts | northmorn</title>
+    <link>https://northmorn.com/post/</link>
+      <atom:link href="https://northmorn.com/post/index.xml" rel="self" type="application/rss+xml" />
+    <description>Posts</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>zh-Hans</language><copyright>2017 - 2022</copyright><lastBuildDate>Fri, 21 Jan 2022 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://northmorn.com/media/icon_hu35274ce215ba19d9fc1e071da854ab56_6875_512x512_fill_lanczos_center_3.png</url>
+      <title>Posts</title>
+      <link>https://northmorn.com/post/</link>
+    </image>
+    
+    <item>
+      <title>Manjaro 滚动更新失败</title>
+      <link>https://northmorn.com/post/manjaro/rolling-update-fail/</link>
+      <pubDate>Fri, 21 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>https://northmorn.com/post/manjaro/rolling-update-fail/</guid>
+      <description>&lt;h4 id=&#34;问题cannot-find-shared-library-libffiso7&#34;&gt;问题：Cannot find shared library libffi.so.7&lt;/h4&gt;
+&lt;h4 id=&#34;解决方案&#34;&gt;解决方案&lt;/h4&gt;
+&lt;p&gt;手动安装&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git clone https://aur.archlinux.org/libffi7.git
+cd libffi7
+makepkg -si
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Manjaro 安装 RIME 输入法</title>
+      <link>https://northmorn.com/post/manjaro/ibus-rime/</link>
+      <pubDate>Thu, 20 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>https://northmorn.com/post/manjaro/ibus-rime/</guid>
+      <description>&lt;p&gt;桌面环境为 KDE&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo pacman -S ibus-rime
+yay -S ibus-qt
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;vim ~/.xprofile&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;export GTK_IM_MODULE=ibus
+export XMODIFIERS=@im=ibus
+export QT_IM_MODULE=ibus
+ibus-daemon -d -x
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;faq&#34;&gt;FAQ&lt;/h3&gt;
+&lt;h4 id=&#34;问题候选词横排显示设置无效&#34;&gt;问题：候选词横排显示设置无效&lt;/h4&gt;
+&lt;p&gt;IBus Preferences → Font and Style → Candidates orientation: Horizontal&lt;/p&gt;
+&lt;h4 id=&#34;解决方案&#34;&gt;解决方案&lt;/h4&gt;
+&lt;p&gt;vim /usr/share/rime-data/ibus_rime.yaml&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;style:
+  # candidate list orientation (false|true).
+  horizontal: true
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
