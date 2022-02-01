@@ -60,10 +60,10 @@
   
     
   
-  <meta name="description" content="" />
+  <meta name="description" content="根据官方文档，编译只能在 Linux 环境进行。 以 Arch Linux 为例。 1. 安装依赖 export" />
 
   
-  <link rel="alternate" hreflang="zh-Hans" href="https://northmorn.com/tag/manjaro/" />
+  <link rel="alternate" hreflang="zh-Hans" href="https://northmorn.com/post/calibre/build-calibre/" />
 
   
   
@@ -268,8 +268,6 @@
   
 
   
-    <link rel="alternate" href="/tag/manjaro/index.xml" type="application/rss+xml" title="northmorn" />
-  
 
   
     <link rel="manifest" href="/manifest.webmanifest" />
@@ -278,7 +276,7 @@
   <link rel="icon" type="image/png" href="/media/icon_hu35274ce215ba19d9fc1e071da854ab56_6875_32x32_fill_lanczos_center_3.png" />
   <link rel="apple-touch-icon" type="image/png" href="/media/icon_hu35274ce215ba19d9fc1e071da854ab56_6875_180x180_fill_lanczos_center_3.png" />
 
-  <link rel="canonical" href="https://northmorn.com/tag/manjaro/" />
+  <link rel="canonical" href="https://northmorn.com/post/calibre/build-calibre/" />
 
   
   
@@ -301,33 +299,82 @@
   <meta property="twitter:card" content="summary" />
   
   <meta property="og:site_name" content="northmorn" />
-  <meta property="og:url" content="https://northmorn.com/tag/manjaro/" />
-  <meta property="og:title" content="Manjaro | northmorn" />
-  <meta property="og:description" content="" /><meta property="og:image" content="https://northmorn.com/media/icon_hu35274ce215ba19d9fc1e071da854ab56_6875_512x512_fill_lanczos_center_3.png" />
+  <meta property="og:url" content="https://northmorn.com/post/calibre/build-calibre/" />
+  <meta property="og:title" content="尝试编译 calibre | northmorn" />
+  <meta property="og:description" content="根据官方文档，编译只能在 Linux 环境进行。 以 Arch Linux 为例。 1. 安装依赖 export" /><meta property="og:image" content="https://northmorn.com/media/icon_hu35274ce215ba19d9fc1e071da854ab56_6875_512x512_fill_lanczos_center_3.png" />
     <meta property="twitter:image" content="https://northmorn.com/media/icon_hu35274ce215ba19d9fc1e071da854ab56_6875_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="zh-Hans" />
   
     
-      <meta property="og:updated_time" content="2022-01-21T00:00:00&#43;00:00" />
+      <meta
+        property="article:published_time"
+        content="2022-01-28T00:00:00&#43;00:00"
+      />
     
+    <meta property="article:modified_time" content="2022-01-28T00:00:00&#43;00:00">
+  
+
+  
+
+
+    
+
+
+
+
+
+
+  
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://northmorn.com/post/calibre/build-calibre/"
+  },
+  "headline": "尝试编译 calibre",
+  
+  "datePublished": "2022-01-28T00:00:00Z",
+  "dateModified": "2022-01-28T00:00:00Z",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Authors"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "northmorn",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://northmorn.com/media/icon_hu35274ce215ba19d9fc1e071da854ab56_6875_192x192_fill_lanczos_center_3.png"
+    }
+  },
+  "description": "根据官方文档，编译只能在 Linux 环境进行。 以 Arch Linux 为例。 1. 安装依赖 export"
+}
+</script>
+
+  
+
+  
+
   
 
   
 
 
 
-  
-
-  
 
 
-
-
-
-  <title>Manjaro | northmorn</title>
+  <title>尝试编译 calibre | northmorn</title>
 </head>
 
 
-<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   "  >
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="136e7860df02be96b7636b51e59fb10d" >
 
   
   
@@ -579,78 +626,58 @@
     
 
     
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  
-  
-  
-    
-  
-<div class="universal-wrapper pt-3">
-  <h1>Manjaro</h1>
-
-  
-
-  
-</div>
-
-
-
-<div class="universal-wrapper">
-  
-
-  
-  
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-<div class="media stream-item view-compact">
-  <div class="media-body">
-
-    <div class="section-subheading article-title mb-0 mt-0">
-      <a href="/post/manjaro/rolling-update-fail/" >Manjaro 滚动更新失败问题修复</a>
-    </div>
-
-    
-    <a href="/post/manjaro/rolling-update-fail/"  class="summary-link">
-      <div class="article-style">
-        问题：Cannot find shared library libffi.so.7 解决方案 手动安装 git clone https://aur.archlinux.org/libffi7.git cd libffi7 makepkg -si
+<div class="container-fluid docs">
+    <div class="row flex-xl-nowrap">
+      <div class="d-none d-xl-block col-xl-2 docs-toc">
+        <ul class="nav toc-top">
+          <li><a href="#" id="back_to_top" class="docs-toc-title">目录</a></li>
+        </ul>
+        <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#1-安装依赖">1. 安装依赖</a></li>
+            <li><a href="#2-拉取代码">2. 拉取代码</a></li>
+            <li><a href="#3-构建依赖">3. 构建依赖</a></li>
+            <li><a href="#4-搭建虚拟环境">4. 搭建虚拟环境</a></li>
+            <li><a href="#5-开始编译">5. 开始编译</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
       </div>
-    </a>
+      <main class="col-12 col-md-0 col-xl-10 py-md-3 pl-md-5 docs-content" role="main">
+
+        <article class="article">
+            
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>尝试编译 calibre</h1>
+
+  
+
+  
     
-
-    <div class="stream-meta article-metadata">
-
-      
-
-      
-        
 
 
 <div class="article-metadata">
@@ -664,7 +691,7 @@
     
       
     
-    1月 21, 2022
+    1月 28, 2022
   </span>
   
 
@@ -686,119 +713,201 @@
   
   <span class="middot-divider"></span>
   <span class="article-categories">
-    <i class="fas fa-folder mr-1"></i><a href="/category/manjaro-%E6%95%99%E7%A8%8B/">Manjaro 教程</a></span>
+    <i class="fas fa-folder mr-1"></i><a href="/category/calibre-%E6%95%99%E7%A8%8B/">calibre 教程</a></span>
   
 
 </div>
 
-      
-    </div>
-
     
 
-  </div>
-  <div class="ml-3">
-    
-    
-  </div>
+
+
+
+
+  
 </div>
 
+
+            <div class="article-container">
+              <div class="article-style">
+                <p>根据<a href="https://github.com/kovidgoyal/calibre/blob/master/bypy/README.rst" target="_blank" rel="noopener">官方文档</a>，编译只能在 Linux 环境进行。<br>
+以 Arch Linux 为例。</p>
+<h3 id="1-安装依赖">1. 安装依赖</h3>
+<pre><code class="language-bash">export QTWEBENGINE_DISABLE_SANDBOX=1
+sudo pacman -Sy
+sudo pacman -S openssh calibre git pkg-config gcc make sip python-pip --noconfirm
+pip install PyQt5 PyQt-builder
+</code></pre>
+<h3 id="2-拉取代码">2. 拉取代码</h3>
+<pre><code class="language-bash">git clone https://github.com/kovidgoyal/bypy.git
+git clone https://github.com/kovidgoyal/calibre.git
+cd bypy &amp;&amp; git switch qt5 &amp;&amp; cd ../calibre
+</code></pre>
+<h3 id="3-构建依赖">3. 构建依赖</h3>
+<pre><code class="language-bash">./setup.py bootstrap
+</code></pre>
+<p>过程比较慢，最好使用代理。</p>
+<h3 id="4-搭建虚拟环境">4. 搭建虚拟环境</h3>
+<p>以 macOS 为例，<a href="https://github.com/kovidgoyal/bypy/blob/master/virtual_machine/README-macos.rst" target="_blank" rel="noopener">官方文档</a>。<br>
+注意，这里失效了：</p>
+<pre><code>-nic user,model=e1000-82545em,mac=52:54:00:0e:0d:20,hostfwd=tcp:0.0.0.0:22001-:22
+</code></pre>
+<p>改为：</p>
+<pre><code>-netdev user,id=net0,hostfwd=tcp:0.0.0.0:22001-:22 \
+-device e1000-82545em,netdev=net0,id=net0,mac=52:54:00:c9:18:27 \
+</code></pre>
+<h3 id="5-开始编译">5. 开始编译</h3>
+<pre><code>./setup.py build_dep macos
+</code></pre>
+<p>到这里进行不下去了。执行报错，定位到 <code>read_build_server</code> 函数，原作者没有提供可供参考的配置文件，这里的返回结果 <code>BUILD_SERVER_VM_CD</code> 不知道是什么内容，简单尝试修改仍无法解决。<br>
+此外，<code>bypy/vms.py</code> 文件 <code>ssh_to</code> 函数的参数 <code>port</code> 也是从配置文件中取的，这里没有取到，此处可以暂时改为上文修改过的 <code>22001</code>。</p>
+
+              </div>
+              
+
+
+
+
+<div class="article-tags">
   
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
+  <a class="badge badge-light" href="/tag/calibre/">calibre</a>
   
+</div>
 
 
-<div class="media stream-item view-compact">
-  <div class="media-body">
 
-    <div class="section-subheading article-title mb-0 mt-0">
-      <a href="/post/manjaro/ibus-rime/" >Manjaro 安装 RIME 输入法</a>
-    </div>
-
+<div class="share-box">
+  <ul class="share">
     
-    <a href="/post/manjaro/ibus-rime/"  class="summary-link">
-      <div class="article-style">
-        桌面环境为 KDE sudo pacman -S ibus-rime yay -S ibus-qt vim ~/.xprofile export GTK_IM_MODULE=ibus export XMODIFIERS=@im=ibus export QT_IM_MODULE=ibus ibus-daemon -d -x FAQ 问题：候选
-      </div>
-    </a>
-    
-
-    <div class="stream-meta article-metadata">
-
       
-
+      
       
         
-
-
-<div class="article-metadata">
-
-  
-  
-
-  
-  <span class="article-date">
-    
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https://northmorn.com/post/calibre/build-calibre/&amp;text=%e5%b0%9d%e8%af%95%e7%bc%96%e8%af%91%20calibre" target="_blank" rel="noopener" class="share-btn-twitter" aria-label="twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
     
       
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https://northmorn.com/post/calibre/build-calibre/&amp;t=%e5%b0%9d%e8%af%95%e7%bc%96%e8%af%91%20calibre" target="_blank" rel="noopener" class="share-btn-facebook" aria-label="facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
     
-    1月 20, 2022
-  </span>
-  
-
-  
-
-  
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    1 分钟阅读时长
-  </span>
-  
-
-  
-  
-  
-  
-
-  
-  
-  <span class="middot-divider"></span>
-  <span class="article-categories">
-    <i class="fas fa-folder mr-1"></i><a href="/category/manjaro-%E6%95%99%E7%A8%8B/">Manjaro 教程</a></span>
-  
-
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=%e5%b0%9d%e8%af%95%e7%bc%96%e8%af%91%20calibre&amp;body=https://northmorn.com/post/calibre/build-calibre/" target="_blank" rel="noopener" class="share-btn-email" aria-label="envelope">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https://northmorn.com/post/calibre/build-calibre/&amp;title=%e5%b0%9d%e8%af%95%e7%bc%96%e8%af%91%20calibre" target="_blank" rel="noopener" class="share-btn-linkedin" aria-label="linkedin-in">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="whatsapp://send?text=%e5%b0%9d%e8%af%95%e7%bc%96%e8%af%91%20calibre%20https://northmorn.com/post/calibre/build-calibre/" target="_blank" rel="noopener" class="share-btn-whatsapp" aria-label="whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https://northmorn.com/post/calibre/build-calibre/&amp;title=%e5%b0%9d%e8%af%95%e7%bc%96%e8%af%91%20calibre" target="_blank" rel="noopener" class="share-btn-weibo" aria-label="weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
 </div>
 
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+
+  <section id="comments">
+    
+<h4>Comments:</h4>
+<div id="cusdis_thread" data-host="https://cusdis-vercel-one.vercel.app"
+    data-app-id="bdea5e53-0c95-46d3-9419-89853ef25ee6"
+    data-page-id="136e7860df02be96b7636b51e59fb10d" data-page-url="https://northmorn.com/post/calibre/build-calibre/"
+    data-page-title="尝试编译 calibre"></div>
+<script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
+  </section>
+
+
+
+
+
+
+
+
+
+
+            </div>
+        </article>
+  
+      </main>
     </div>
-
-    
-
   </div>
-  <div class="ml-3">
-    
-    
-  </div>
-</div>
-
   
-
-  
-
-</div>
   </div>
 
   <div class="page-footer">

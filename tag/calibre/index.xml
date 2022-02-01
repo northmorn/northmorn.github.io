@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts | northmorn</title>
-    <link>https://northmorn.com/post/</link>
-      <atom:link href="https://northmorn.com/post/index.xml" rel="self" type="application/rss+xml" />
-    <description>Posts</description>
+    <title>calibre | northmorn</title>
+    <link>https://northmorn.com/tag/calibre/</link>
+      <atom:link href="https://northmorn.com/tag/calibre/index.xml" rel="self" type="application/rss+xml" />
+    <description>calibre</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>zh-Hans</language><copyright>2017 - 2022</copyright><lastBuildDate>Fri, 28 Jan 2022 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://northmorn.com/media/icon_hu35274ce215ba19d9fc1e071da854ab56_6875_512x512_fill_lanczos_center_3.png</url>
-      <title>Posts</title>
-      <link>https://northmorn.com/post/</link>
+      <title>calibre</title>
+      <link>https://northmorn.com/tag/calibre/</link>
     </image>
     
     <item>
@@ -83,48 +83,6 @@ cd bypy &amp;amp;&amp;amp; git switch qt5 &amp;amp;&amp;amp; cd ../calibre
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;到这里进行不下去了。执行报错，定位到 &lt;code&gt;read_build_server&lt;/code&gt; 函数，原作者没有提供可供参考的配置文件，这里的返回结果 &lt;code&gt;BUILD_SERVER_VM_CD&lt;/code&gt; 不知道是什么内容，简单尝试修改仍无法解决。&lt;br&gt;
 此外，&lt;code&gt;bypy/vms.py&lt;/code&gt; 文件 &lt;code&gt;ssh_to&lt;/code&gt; 函数的参数 &lt;code&gt;port&lt;/code&gt; 也是从配置文件中取的，这里没有取到，此处可以暂时改为上文修改过的 &lt;code&gt;22001&lt;/code&gt;。&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Manjaro 滚动更新失败问题修复</title>
-      <link>https://northmorn.com/post/manjaro/rolling-update-fail/</link>
-      <pubDate>Fri, 21 Jan 2022 00:00:00 +0000</pubDate>
-      <guid>https://northmorn.com/post/manjaro/rolling-update-fail/</guid>
-      <description>&lt;h4 id=&#34;问题cannot-find-shared-library-libffiso7&#34;&gt;问题：Cannot find shared library libffi.so.7&lt;/h4&gt;
-&lt;h4 id=&#34;解决方案&#34;&gt;解决方案&lt;/h4&gt;
-&lt;p&gt;手动安装&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git clone https://aur.archlinux.org/libffi7.git
-cd libffi7
-makepkg -si
-&lt;/code&gt;&lt;/pre&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Manjaro 安装 RIME 输入法</title>
-      <link>https://northmorn.com/post/manjaro/ibus-rime/</link>
-      <pubDate>Thu, 20 Jan 2022 00:00:00 +0000</pubDate>
-      <guid>https://northmorn.com/post/manjaro/ibus-rime/</guid>
-      <description>&lt;p&gt;桌面环境为 KDE&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo pacman -S ibus-rime
-yay -S ibus-qt
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;vim ~/.xprofile&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;export GTK_IM_MODULE=ibus
-export XMODIFIERS=@im=ibus
-export QT_IM_MODULE=ibus
-ibus-daemon -d -x
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;faq&#34;&gt;FAQ&lt;/h3&gt;
-&lt;h4 id=&#34;问题候选词横排显示设置无效&#34;&gt;问题：候选词横排显示设置无效&lt;/h4&gt;
-&lt;p&gt;IBus Preferences → Font and Style → Candidates orientation: Horizontal&lt;/p&gt;
-&lt;h4 id=&#34;解决方案&#34;&gt;解决方案&lt;/h4&gt;
-&lt;p&gt;vim /usr/share/rime-data/ibus_rime.yaml&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;style:
-  # candidate list orientation (false|true).
-  horizontal: true
-&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     

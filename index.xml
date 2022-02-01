@@ -5,7 +5,7 @@
     <link>https://northmorn.com/</link>
       <atom:link href="https://northmorn.com/index.xml" rel="self" type="application/rss+xml" />
     <description>northmorn</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>zh-Hans</language><copyright>2017 - 2022</copyright><lastBuildDate>Fri, 21 Jan 2022 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>zh-Hans</language><copyright>2017 - 2022</copyright><lastBuildDate>Fri, 28 Jan 2022 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://northmorn.com/media/icon_hu35274ce215ba19d9fc1e071da854ab56_6875_512x512_fill_lanczos_center_3.png</url>
       <title>northmorn</title>
@@ -13,7 +13,81 @@
     </image>
     
     <item>
-      <title>Manjaro 滚动更新失败</title>
+      <title>calibre 保留中文书名</title>
+      <link>https://northmorn.com/post/calibre/calibre-utf8-name/</link>
+      <pubDate>Fri, 28 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>https://northmorn.com/post/calibre/calibre-utf8-name/</guid>
+      <description>&lt;p&gt;在 calibre 中，导入中文书名、中文作者名的书籍时，calibre library 中自动生成的文件夹名、文件名会转换成拼音。这是个老大难的问题了，网络上的解决方案大概有以下 2 种：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;通过设置项修改&lt;/li&gt;
+&lt;li&gt;编译 python 文件，替换程序文件&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;其中，方案 1 针对的是「保存到硬盘」操作，对导入数据不生效。方案 2 在新版 calibre 修改了编译方式后也不生效。&lt;/p&gt;
+&lt;p&gt;怎样解决这个问题呢，代码位置已经很清楚了，首先想到的是自己编译源代码。于是&lt;a href=&#34;https://northmorn.com/post/calibre/build-calibre/&#34;&gt;尝试编译 calibre&lt;/a&gt;，结果失败了。&lt;/p&gt;
+&lt;p&gt;换个思路吧，一翻搜索后发现，calibre 的作者强烈不建议自己编译，而是建议使用 debug 模式，具体操作官方文档描述得很清楚，&lt;a href=&#34;https://manual.calibre-ebook.com/develop.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://manual.calibre-ebook.com/develop.html&lt;/a&gt; 。&lt;/p&gt;
+&lt;p&gt;以 macOS 为例，首先安装 calibre，&lt;code&gt;brew reinstall --cask calibre&lt;/code&gt; 或官网下载 dmg 安装。
+然后下载源代码，&lt;code&gt;check out&lt;/code&gt; 对应版本，根据需要修改源代码。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;git clone https://github.com/kovidgoyal/calibre.git
+gco v5.35.0
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;创建快捷方式&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;vim /usr/local/bin/calibre-develop
+
+#!/bin/sh
+export CALIBRE_DEVELOP_FROM=&amp;quot;/Users/kovid/work/calibre/src&amp;quot;
+calibre-debug -g
+
+chmod +x /usr/local/bin/calibre-develop
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;通过 &lt;code&gt;calibre-develop&lt;/code&gt; 命令运行程序。&lt;/p&gt;
+&lt;p&gt;参考资料：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/snomiao/calibre-utf8-path&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://github.com/snomiao/calibre-utf8-path&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>尝试编译 calibre</title>
+      <link>https://northmorn.com/post/calibre/build-calibre/</link>
+      <pubDate>Fri, 28 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>https://northmorn.com/post/calibre/build-calibre/</guid>
+      <description>&lt;p&gt;根据&lt;a href=&#34;https://github.com/kovidgoyal/calibre/blob/master/bypy/README.rst&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;官方文档&lt;/a&gt;，编译只能在 Linux 环境进行。&lt;br&gt;
+以 Arch Linux 为例。&lt;/p&gt;
+&lt;h3 id=&#34;1-安装依赖&#34;&gt;1. 安装依赖&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;export QTWEBENGINE_DISABLE_SANDBOX=1
+sudo pacman -Sy
+sudo pacman -S openssh calibre git pkg-config gcc make sip python-pip --noconfirm
+pip install PyQt5 PyQt-builder
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;2-拉取代码&#34;&gt;2. 拉取代码&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git clone https://github.com/kovidgoyal/bypy.git
+git clone https://github.com/kovidgoyal/calibre.git
+cd bypy &amp;amp;&amp;amp; git switch qt5 &amp;amp;&amp;amp; cd ../calibre
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;3-构建依赖&#34;&gt;3. 构建依赖&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;./setup.py bootstrap
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;过程比较慢，最好使用代理。&lt;/p&gt;
+&lt;h3 id=&#34;4-搭建虚拟环境&#34;&gt;4. 搭建虚拟环境&lt;/h3&gt;
+&lt;p&gt;以 macOS 为例，&lt;a href=&#34;https://github.com/kovidgoyal/bypy/blob/master/virtual_machine/README-macos.rst&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;官方文档&lt;/a&gt;。&lt;br&gt;
+注意，这里失效了：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;-nic user,model=e1000-82545em,mac=52:54:00:0e:0d:20,hostfwd=tcp:0.0.0.0:22001-:22
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;改为：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;-netdev user,id=net0,hostfwd=tcp:0.0.0.0:22001-:22 \
+-device e1000-82545em,netdev=net0,id=net0,mac=52:54:00:c9:18:27 \
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;5-开始编译&#34;&gt;5. 开始编译&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;./setup.py build_dep macos
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;到这里进行不下去了。执行报错，定位到 &lt;code&gt;read_build_server&lt;/code&gt; 函数，原作者没有提供可供参考的配置文件，这里的返回结果 &lt;code&gt;BUILD_SERVER_VM_CD&lt;/code&gt; 不知道是什么内容，简单尝试修改仍无法解决。&lt;br&gt;
+此外，&lt;code&gt;bypy/vms.py&lt;/code&gt; 文件 &lt;code&gt;ssh_to&lt;/code&gt; 函数的参数 &lt;code&gt;port&lt;/code&gt; 也是从配置文件中取的，这里没有取到，此处可以暂时改为上文修改过的 &lt;code&gt;22001&lt;/code&gt;。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Manjaro 滚动更新失败问题修复</title>
       <link>https://northmorn.com/post/manjaro/rolling-update-fail/</link>
       <pubDate>Fri, 21 Jan 2022 00:00:00 +0000</pubDate>
       <guid>https://northmorn.com/post/manjaro/rolling-update-fail/</guid>
