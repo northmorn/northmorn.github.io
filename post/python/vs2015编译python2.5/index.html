@@ -60,10 +60,10 @@
   
     
   
-  <meta name="description" content="" />
+  <meta name="description" content="阅读《Python源码剖析》，在Windows环境下编译Py" />
 
   
-  <link rel="alternate" hreflang="zh-Hans" href="https://northmorn.com/tag/calibre/" />
+  <link rel="alternate" hreflang="zh-Hans" href="https://northmorn.com/post/python/vs2015%E7%BC%96%E8%AF%91python2.5/" />
 
   
   
@@ -268,8 +268,6 @@
   
 
   
-    <link rel="alternate" href="/tag/calibre/index.xml" type="application/rss+xml" title="northmorn" />
-  
 
   
     <link rel="manifest" href="/manifest.webmanifest" />
@@ -278,7 +276,7 @@
   <link rel="icon" type="image/png" href="/media/icon_hu35274ce215ba19d9fc1e071da854ab56_6875_32x32_fill_lanczos_center_3.png" />
   <link rel="apple-touch-icon" type="image/png" href="/media/icon_hu35274ce215ba19d9fc1e071da854ab56_6875_180x180_fill_lanczos_center_3.png" />
 
-  <link rel="canonical" href="https://northmorn.com/tag/calibre/" />
+  <link rel="canonical" href="https://northmorn.com/post/python/vs2015%E7%BC%96%E8%AF%91python2.5/" />
 
   
   
@@ -301,33 +299,82 @@
   <meta property="twitter:card" content="summary" />
   
   <meta property="og:site_name" content="northmorn" />
-  <meta property="og:url" content="https://northmorn.com/tag/calibre/" />
-  <meta property="og:title" content="calibre | northmorn" />
-  <meta property="og:description" content="" /><meta property="og:image" content="https://northmorn.com/media/icon_hu35274ce215ba19d9fc1e071da854ab56_6875_512x512_fill_lanczos_center_3.png" />
+  <meta property="og:url" content="https://northmorn.com/post/python/vs2015%E7%BC%96%E8%AF%91python2.5/" />
+  <meta property="og:title" content="VS2015编译python2.5 | northmorn" />
+  <meta property="og:description" content="阅读《Python源码剖析》，在Windows环境下编译Py" /><meta property="og:image" content="https://northmorn.com/media/icon_hu35274ce215ba19d9fc1e071da854ab56_6875_512x512_fill_lanczos_center_3.png" />
     <meta property="twitter:image" content="https://northmorn.com/media/icon_hu35274ce215ba19d9fc1e071da854ab56_6875_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="zh-Hans" />
   
     
-      <meta property="og:updated_time" content="2022-01-28T00:00:00&#43;00:00" />
+      <meta
+        property="article:published_time"
+        content="2017-06-22T00:00:00&#43;00:00"
+      />
     
+    <meta property="article:modified_time" content="2017-06-22T00:00:00&#43;00:00">
+  
+
+  
+
+
+    
+
+
+
+
+
+
+  
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://northmorn.com/post/python/vs2015%E7%BC%96%E8%AF%91python2.5/"
+  },
+  "headline": "VS2015编译python2.5",
+  
+  "datePublished": "2017-06-22T00:00:00Z",
+  "dateModified": "2017-06-22T00:00:00Z",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Authors"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "northmorn",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://northmorn.com/media/icon_hu35274ce215ba19d9fc1e071da854ab56_6875_192x192_fill_lanczos_center_3.png"
+    }
+  },
+  "description": "阅读《Python源码剖析》，在Windows环境下编译Py"
+}
+</script>
+
+  
+
+  
+
   
 
   
 
 
 
-  
-
-  
 
 
-
-
-
-  <title>calibre | northmorn</title>
+  <title>VS2015编译python2.5 | northmorn</title>
 </head>
 
 
-<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   "  >
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="f31ebe1ae4350eee52f25e5c02e1f929" >
 
   
   
@@ -338,7 +385,7 @@
   
   
   
-  <script src="/js/wowchemy-init.min.9e9fa4b2ccd29f9edfae161d14d2effd.js"></script>
+  <script src="/js/wowchemy-init.min.ced4c4e0190cf57ce42494e355f2bdf6.js"></script>
 
   
 
@@ -579,6 +626,8 @@
     
 
     
+        <article class="article">
+            
 
 
 
@@ -595,62 +644,14 @@
 
   
   
+  
+<div class="article-container pt-3">
+  <h1>VS2015编译python2.5</h1>
+
+  
+
   
     
-  
-<div class="universal-wrapper pt-3">
-  <h1>calibre</h1>
-
-  
-
-  
-</div>
-
-
-
-<div class="universal-wrapper">
-  
-
-  
-  
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-<div class="media stream-item view-compact">
-  <div class="media-body">
-
-    <div class="section-subheading article-title mb-0 mt-0">
-      <a href="/post/calibre/calibre-utf8-name/" >calibre 保留中文书名</a>
-    </div>
-
-    
-    <a href="/post/calibre/calibre-utf8-name/"  class="summary-link">
-      <div class="article-style">
-        在 calibre 中，导入中文书名、中文作者名的书籍时，calibre library 中
-      </div>
-    </a>
-    
-
-    <div class="stream-meta article-metadata">
-
-      
-
-      
-        
 
 
 <div class="article-metadata">
@@ -664,7 +665,7 @@
     
       
     
-    1月 28, 2022
+    6月 22, 2017
   </span>
   
 
@@ -686,119 +687,187 @@
   
   <span class="middot-divider"></span>
   <span class="article-categories">
-    <i class="fas fa-folder mr-1"></i><a href="/category/calibre-%E6%95%99%E7%A8%8B/">calibre 教程</a></span>
+    <i class="fas fa-folder mr-1"></i><a href="/category/python/">Python</a></span>
   
 
 </div>
 
-      
-    </div>
-
     
 
-  </div>
-  <div class="ml-3">
-    
-    
-  </div>
+
+
+
+
+  
 </div>
 
+
+            <div class="article-container">
+              <div class="article-style">
+                <p>阅读《Python源码剖析》，在Windows环境下编译Python。<br>
+下载源码，用VS2015打开PCBuild8目录下的工程文件。
+项目属性单启动项目改为python，配置属性只需生成python，pythoncore。<br>
+将make_versioninfo_d工程属性中的目标文件名修改为make_versioninfo_d。<br>
+将pythoncore工程属性中的目标文件名修改为python25_d。<br>
+向pythoncore工程中的timemodule.c文件中添加：</p>
+<pre><code class="language-c">#if defined _MSC_VER &amp;&amp; _MSC_VER &gt;= 1900
+#define timezone _timezone
+#define tzname _tzname
+#define daylight _daylight
+#endif
+</code></pre>
+<p>向pythoncore工程中添加_typesmodule.c文件，该文件位于python2.5/Modules目录。</p>
+<h3 id="参考信息">参考信息：</h3>
+<blockquote>
+<p><a href="https://bugs.python.org/issue25759" target="_blank" rel="noopener">https://bugs.python.org/issue25759</a><br>
+<a href="http://blog.csdn.net/wanlizhengren/article/details/4798228" target="_blank" rel="noopener">http://blog.csdn.net/wanlizhengren/article/details/4798228</a><br>
+<a href="http://disenone.github.io/2016/06/01/vs2015-python" target="_blank" rel="noopener">http://disenone.github.io/2016/06/01/vs2015-python</a></p>
+</blockquote>
+
+              </div>
+              
+
+
+
+
+<div class="article-tags">
   
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
+  <a class="badge badge-light" href="/tag/python/">Python</a>
   
+  <a class="badge badge-light" href="/tag/vs/">VS</a>
+  
+</div>
 
 
-<div class="media stream-item view-compact">
-  <div class="media-body">
 
-    <div class="section-subheading article-title mb-0 mt-0">
-      <a href="/post/calibre/build-calibre/" >尝试编译 calibre</a>
-    </div>
-
+<div class="share-box">
+  <ul class="share">
     
-    <a href="/post/calibre/build-calibre/"  class="summary-link">
-      <div class="article-style">
-        根据官方文档，编译只能在 Linux 环境进行。 以 Arch Linux 为例。 1. 安装依赖 export
-      </div>
-    </a>
-    
-
-    <div class="stream-meta article-metadata">
-
       
-
+      
       
         
-
-
-<div class="article-metadata">
-
-  
-  
-
-  
-  <span class="article-date">
-    
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https://northmorn.com/post/python/vs2015%E7%BC%96%E8%AF%91python2.5/&amp;text=VS2015%e7%bc%96%e8%af%91python2.5" target="_blank" rel="noopener" class="share-btn-twitter" aria-label="twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
     
       
-    
-    1月 28, 2022
-  </span>
-  
-
-  
-
-  
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    1 分钟阅读时长
-  </span>
-  
-
-  
-  
-  
-  
-
-  
-  
-  <span class="middot-divider"></span>
-  <span class="article-categories">
-    <i class="fas fa-folder mr-1"></i><a href="/category/calibre-%E6%95%99%E7%A8%8B/">calibre 教程</a></span>
-  
-
-</div>
-
       
-    </div>
-
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https://northmorn.com/post/python/vs2015%E7%BC%96%E8%AF%91python2.5/&amp;t=VS2015%e7%bc%96%e8%af%91python2.5" target="_blank" rel="noopener" class="share-btn-facebook" aria-label="facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
     
-
-  </div>
-  <div class="ml-3">
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=VS2015%e7%bc%96%e8%af%91python2.5&amp;body=https://northmorn.com/post/python/vs2015%E7%BC%96%E8%AF%91python2.5/" target="_blank" rel="noopener" class="share-btn-email" aria-label="envelope">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
     
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https://northmorn.com/post/python/vs2015%E7%BC%96%E8%AF%91python2.5/&amp;title=VS2015%e7%bc%96%e8%af%91python2.5" target="_blank" rel="noopener" class="share-btn-linkedin" aria-label="linkedin-in">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
     
-  </div>
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="whatsapp://send?text=VS2015%e7%bc%96%e8%af%91python2.5%20https://northmorn.com/post/python/vs2015%E7%BC%96%E8%AF%91python2.5/" target="_blank" rel="noopener" class="share-btn-whatsapp" aria-label="whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https://northmorn.com/post/python/vs2015%E7%BC%96%E8%AF%91python2.5/&amp;title=VS2015%e7%bc%96%e8%af%91python2.5" target="_blank" rel="noopener" class="share-btn-weibo" aria-label="weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
 </div>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
   
 
   
 
-</div>
+  <section id="comments">
+    
+<h4>Comments:</h4>
+<div id="cusdis_thread" data-host="https://cusdis-vercel-one.vercel.app"
+    data-app-id="bdea5e53-0c95-46d3-9419-89853ef25ee6"
+    data-page-id="f31ebe1ae4350eee52f25e5c02e1f929" data-page-url="https://northmorn.com/post/python/vs2015%E7%BC%96%E8%AF%91python2.5/"
+    data-page-title="VS2015编译python2.5"></div>
+<script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
+  </section>
+
+
+
+
+
+
+
+
+
+
+            </div>
+        </article>
+  
   </div>
 
   <div class="page-footer">
@@ -841,7 +910,7 @@
 
   
   <p class="powered-by copyright-license-text">
-    © 2023 northmorn. This work is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0" rel="noopener noreferrer" target="_blank">CC BY NC ND 4.0</a>
+    © 2022 northmorn. This work is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0" rel="noopener noreferrer" target="_blank">CC BY NC ND 4.0</a>
   </p>
   
 
@@ -897,7 +966,7 @@
       
 
     
-    <script src="/js/vendor-bundle.min.9592335d574f7a97010f99b90ad0f310.js"></script>
+    <script src="/js/vendor-bundle.min.b73dfaac3b6499dc997741748a7c3fe2.js"></script>
 
     
     
@@ -986,7 +1055,7 @@
 
     
     
-      <script src="/js/wowchemy-headroom.c251366b4128fd5e6b046d4c97a62a51.js" type="module"></script>
+      <script src="/js/wowchemy-headroom.79343bd00de25e04f03b6af2819f8643.js" type="module"></script>
     
     
     
@@ -998,7 +1067,7 @@
       
     
     
-    <script src="/zh/js/wowchemy.min.30fa88b887d54ba897b76421749e9b76.js"></script>
+    <script src="/zh/js/wowchemy.min.d1f527c8d784ea5f71aa2bf128db5fc5.js"></script>
 
     
   <script async defer src="https://buttons.github.io/buttons.js"></script>

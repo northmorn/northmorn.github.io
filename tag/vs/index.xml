@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>VS | northmorn</title>
+    <link>https://northmorn.com/tag/vs/</link>
+      <atom:link href="https://northmorn.com/tag/vs/index.xml" rel="self" type="application/rss+xml" />
+    <description>VS</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>zh-Hans</language><copyright>2017 - 2022</copyright><lastBuildDate>Thu, 22 Jun 2017 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://northmorn.com/media/icon_hu35274ce215ba19d9fc1e071da854ab56_6875_512x512_fill_lanczos_center_3.png</url>
+      <title>VS</title>
+      <link>https://northmorn.com/tag/vs/</link>
+    </image>
+    
+    <item>
+      <title>VS2015编译python2.5</title>
+      <link>https://northmorn.com/post/python/vs2015%E7%BC%96%E8%AF%91python2.5/</link>
+      <pubDate>Thu, 22 Jun 2017 00:00:00 +0000</pubDate>
+      <guid>https://northmorn.com/post/python/vs2015%E7%BC%96%E8%AF%91python2.5/</guid>
+      <description>&lt;p&gt;阅读《Python源码剖析》，在Windows环境下编译Python。&lt;br&gt;
+下载源码，用VS2015打开PCBuild8目录下的工程文件。
+项目属性单启动项目改为python，配置属性只需生成python，pythoncore。&lt;br&gt;
+将make_versioninfo_d工程属性中的目标文件名修改为make_versioninfo_d。&lt;br&gt;
+将pythoncore工程属性中的目标文件名修改为python25_d。&lt;br&gt;
+向pythoncore工程中的timemodule.c文件中添加：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;#if defined _MSC_VER &amp;amp;&amp;amp; _MSC_VER &amp;gt;= 1900
+#define timezone _timezone
+#define tzname _tzname
+#define daylight _daylight
+#endif
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;向pythoncore工程中添加_typesmodule.c文件，该文件位于python2.5/Modules目录。&lt;/p&gt;
+&lt;h3 id=&#34;参考信息&#34;&gt;参考信息：&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;https://bugs.python.org/issue25759&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://bugs.python.org/issue25759&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;http://blog.csdn.net/wanlizhengren/article/details/4798228&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;http://blog.csdn.net/wanlizhengren/article/details/4798228&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;http://disenone.github.io/2016/06/01/vs2015-python&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;http://disenone.github.io/2016/06/01/vs2015-python&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

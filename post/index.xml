@@ -128,5 +128,32 @@ ibus-daemon -d -x
 </description>
     </item>
     
+    <item>
+      <title>Visual Studio 2015 编译 Python 2.5</title>
+      <link>https://northmorn.com/post/python/vs2015-build-python2.5/</link>
+      <pubDate>Thu, 22 Jun 2017 00:00:00 +0000</pubDate>
+      <guid>https://northmorn.com/post/python/vs2015-build-python2.5/</guid>
+      <description>&lt;p&gt;阅读《Python 源码剖析》时，需要在 Windows 环境下编译 Python。&lt;br&gt;
+下载源码，用 Visual Studio 2015 打开 PCBuild8 目录下的工程文件。
+项目属性单启动项目改为 python，配置属性只需生成 python，pythoncore。&lt;br&gt;
+将 make_versioninfo_d 工程属性中的目标文件名修改为 make_versioninfo_d。&lt;br&gt;
+将 pythoncore 工程属性中的目标文件名修改为 python25_d。&lt;br&gt;
+向 pythoncore 工程中的 timemodule.c 文件中添加：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;#if defined _MSC_VER &amp;amp;&amp;amp; _MSC_VER &amp;gt;= 1900
+#define timezone _timezone
+#define tzname _tzname
+#define daylight _daylight
+#endif
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;向 pythoncore 工程中添加 _typesmodule.c 文件，该文件位于 python2.5/Modules 目录。&lt;/p&gt;
+&lt;h3 id=&#34;参考信息&#34;&gt;参考信息：&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;https://bugs.python.org/issue25759&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://bugs.python.org/issue25759&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;http://blog.csdn.net/wanlizhengren/article/details/4798228&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;http://blog.csdn.net/wanlizhengren/article/details/4798228&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;http://disenone.github.io/2016/06/01/vs2015-python&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;http://disenone.github.io/2016/06/01/vs2015-python&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+    </item>
+    
   </channel>
 </rss>
